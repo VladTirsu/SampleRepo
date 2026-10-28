@@ -1,3 +1,3 @@
 # SampleRepo6t6
 
-This project is awsome.
+This project is awesome.
