@@ -1,0 +1,26 @@
+
+name: README Spell Check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Spellcheck README
+        uses: streetsidesoftware/cspell-action@v8
+        with:
+          files: README.md
+          incremental_files_only: false
+          strict: true
